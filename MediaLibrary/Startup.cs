@@ -43,8 +43,11 @@ namespace MediaLibrary
 
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 3;
 
-            });
+            }).AddEntityFrameworkStores<MediaLibraryContext>()
+                .AddDefaultTokenProviders();
 
 
 
