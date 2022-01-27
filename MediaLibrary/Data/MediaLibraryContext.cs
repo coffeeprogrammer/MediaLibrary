@@ -17,7 +17,7 @@ namespace MediaLibrary.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<User> Users { get; set; }
