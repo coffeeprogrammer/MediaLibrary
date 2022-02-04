@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MediaLibrary.Data
 {
-    public class MediaLibraryContext : IdentityDbContext
+    public class MediaLibraryContext : DbContext
     {
 
         public MediaLibraryContext() : base() { }
@@ -20,7 +20,9 @@ namespace MediaLibrary.Data
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<User> Users { get; set; }
+        //public DbSet<User> Users { get; set; }
+
+        public DbSet<MediaLibraryUser> MediaLibraryUsers { get; set; }
 
     }
 }
